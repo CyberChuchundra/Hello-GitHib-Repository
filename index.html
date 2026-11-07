@@ -4,79 +4,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя перша вебсторінка</title>
+    <title>Трохи про себе</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
+    <!-- Верхня панель -->
     <header class="header">
-        <a class="logo" href="#">Мій простір</a>
+        <a class="logo" href="#home">Трохи про себе</a>
 
         <nav>
             <a href="#about">Про мене</a>
-            <a href="#interests">Мої захоплення</a>
+            <a href="#interests">Захоплення</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#contacts">Контакти</a>
         </nav>
+        <button id="themeButton" class="theme-button" type="button">
+    🌙 Темна тема
+</button>
     </header>
 
     <main>
-        <section class="hero" id="about">
-            <p class="eyebrow">Вітаю на моїй сторінці!</p>
 
-            <h1>
-                Привіт! Я створюю<br>
-                <span>свій перший сайт.</span>
-            </h1>
+        <!-- Головний блок -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">Мій маленький простір</p>
 
-            <p class="intro">
-                Це невеличка сторінка, створена за допомогою HTML та CSS.
-                Тут я вчуся працювати з веброзробкою
-                та втілювати власні ідеї.
-            </p>
+                <h1>
+                    Привіт!<br>
+                    Це трохи <span>про мене.</span>
+                </h1>
 
-            <a class="button" href="#interests">
-                Дізнатися більше
-            </a>
+                <p class="intro">
+                    Тут зібрано частинку мого життя:
+                    мої захоплення, думки, подорожі
+                    та речі, які роблять мене мною.
+                </p>
+
+                <a class="button" href="#about">
+                    Познайомитися ближче
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/main-photo.jpg"
+                     alt="Моя фотографія">
+            </div>
         </section>
 
+        <!-- Про мене -->
+        <section class="about" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">Знайомство</p>
+                <h2>Трохи про мене</h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    Я людина, якій цікаво пізнавати світ,
+                    відкривати нові місця та пробувати
+                    щось незнайоме.
+                </p>
+
+                <p>
+                    Люблю книги, музику, подорожі
+                    та поступово відкриваю для себе
+                    світ програмування.
+                </p>
+
+                <p>
+                    Цей сайт — невелика історія про мене,
+                    мої інтереси та те, чим я хочу ділитися.
+                </p>
+            </div>
+        </section>
+
+        <!-- Захоплення -->
         <section class="interests" id="interests">
-            <h2>Що мені цікаво?</h2>
+            <p class="eyebrow">Те, що надихає</p>
+            <h2>Мої захоплення</h2>
 
             <div class="cards">
+
+                <article class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Книги</h3>
+                    <p>
+                        Історії, які дозволяють
+                        побачити світ по-іншому.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">✈️</div>
+                    <h3>Подорожі</h3>
+                    <p>
+                        Нові міста, незнайомі вулиці
+                        та незабутні враження.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🎧</div>
+                    <h3>Музика</h3>
+                    <p>
+                        Мелодії, які створюють настрій
+                        і супроводжують кожен день.
+                    </p>
+                </article>
 
                 <article class="card">
                     <div class="card-icon">💻</div>
                     <h3>Програмування</h3>
                     <p>
-                        Вивчати нові технології
-                        та створювати сайти.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>Навчання</h3>
-                    <p>
-                        Дізнаватися щось нове
-                        та розвивати свої навички.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">✨</div>
-                    <h3>Творчість</h3>
-                    <p>
-                        Перетворювати цікаві ідеї
-                        на реальні проєкти.
+                        Навчання, нові технології
+                        та створення власних проєктів.
                     </p>
                 </article>
 
             </div>
         </section>
+
+        <!-- Фотогалерея -->
+        <section class="gallery" id="gallery">
+            <p class="eyebrow">Моменти життя</p>
+            <h2>Моя фотогалерея</h2>
+
+            <div class="gallery-grid">
+                <img src="images/photo1.jpg"
+                     alt="Момент із мого життя">
+
+                <img src="images/photo3.jpg"
+                     alt="Моя подорож">
+
+                <img src="images/photo2.jpg"
+                     alt="Особливий момент">
+            </div>
+            
+<!-- Вікно перегляду фотографій -->
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="closeLightbox">
+        &times;
+    </button>
+
+    <button class="lightbox-arrow prev" id="prevPhoto">
+        &#10094;
+    </button>
+
+    <img src="" alt="Збільшена фотографія" id="lightboxImage">
+
+    <button class="lightbox-arrow next" id="nextPhoto">
+        &#10095;
+    </button>
+
+    <p id="photoCounter"></p>
+
+</div>
+
+        </section>
+
+        <!-- Контакти -->
+        <section class="contacts" id="contacts">
+            <p class="eyebrow">Будемо на зв'язку</p>
+            <h2>Дякую, що завітали!</h2>
+
+            <p>
+                Рада, що ти познайомився(-лася)
+                з моїм маленьким світом.
+            </p>
+            <p id="quoteText">
+    Натисни кнопку та отримай натхнення.
+</p>
+
+<button class="button" id="quoteButton" type="button">
+    Отримати натхнення
+</button>
+        </section>
+
     </main>
 
+    <!-- Нижня частина -->
     <footer>
-        <p>Моя перша вебсторінка · Створено з ❤️</p>
+        <p>Трохи про себе · Створено з ❤️</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
